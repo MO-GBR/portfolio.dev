@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Poetsen+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-Lobster: "Lobster", sans-serif;
+    --font-Comic: "Comic Relief", system-ui;
+    --font-Poetsen: "Poetsen One", sans-serif;
+    --font-Inter: "Inter", sans-serif;
+}
+
+@layer base {
+    * {
+        @apply p-0 m-0 box-border scroll-smooth scheme-dark font-Inter;
+    }
+
+    body {
+        @apply bg-[#050816] overflow-x-hidden;
+    }
+
+    header {
+        @apply fixed top-0 left-0 right-0 w-full flex items-center justify-center h-16 z-1;
+    }
+
+    footer {
+        @apply w-full p-5 border-t border-violet-700 bg-violet-900/30 text-white font-bold font-Lobster text-center text-3xl;
+    }
+
+    img {
+        @apply h-auto max-w-full object-cover;
+    }
+
+    input {
+        @apply border-0 outline-0 w-full;
+    }
+
+    textarea {
+        @apply border-0 outline-0 w-full;
+    }
+
+    button {
+        @apply border-0 outline-0;
+    }
+}
+
+@layer utilities {
+    .Flex_Center {
+        @apply flex items-center justify-center;
+    }
+
+    .Flex_Around {
+        @apply flex items-center justify-around;
+    }
+    /* Gradients */
+    .g1 {
+        @apply bg-gradient-to-r from-[#434343] to-[#000];
+    }
+
+    .g2 {
+        @apply bg-gradient-to-b from-[#804dee] to-[#050816];
+    }
+
+    .g3 {
+        @apply bg-gradient-to-t from-[#42003f] to-[#bf61ff];
+    }
+
+    .g4 {
+        @apply bg-gradient-to-t from-[#f12711] to-[#f5af19];
+    }
+
+    /* Components */
+
+    .Badge {
+        @apply rounded-2xl p-1 font-bold shadow w-fit flex items-center justify-center h-10 m-2;
+    }
+
+    .Nav_Link {
+        @apply text-white decoration-0 hover:bg-violet-950 p-2 hover:rounded-2xl font-Comic;
+    }
+
+    .Skill_Card {
+        @apply bg-purple-950/25 border border-violet-600 rounded-2xl flex items-center justify-around flex-col w-[15rem] h-[20rem];
+    }
+
+    .Certification {
+        @apply bg-purple-950/25 border border-violet-600 rounded-2xl flex flex-col p-0;
+    }
+
+    .Project {
+        @apply bg-purple-950/25 border border-violet-600 rounded-2xl p-0 flex flex-col w-fit items-center;
+    }
+
+    .ContactForm {
+        @apply bg-purple-950/25 border border-violet-600 rounded-2xl p-3 w-[90%];
+    }
+
+    /* Sections */
+
+    /* Hero */
+
+    .HeadText {
+        @apply font-black text-white lg:text-[80px] sm:text-[60px] text-[40px] lg:leading-[98px] mt-2;
+    }
+
+    .SubText {
+        @apply text-[#dfd9ff] font-medium text-[20px] lg:leading-[40px] font-Comic;
+    }
+
+    .Canvas_Loader {
+        @apply text-[10px] w-[1em] h-[1em] rounded-[50%] relative indent-[-9999em] shadow;
+    }
+}
