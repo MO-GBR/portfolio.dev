@@ -1,33 +1,30 @@
-import emailjs from 'emailjs-com';
-import { useState, type ChangeEvent, type FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
+import { useRef, type FormEvent } from 'react';
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const ContactForm = () => {
-    const [formData, setFormData] = useState({ from_name: "", from_email: "", message: "" });
+    const formRef = useRef<HTMLFormElement>(null);
 
-    const handleChange = (e: ChangeEvent) => {
-        setFormData({ ...formData, [e.target.nodeName]: e.target.nodeValue });
-    };
-
-    const handleOnSubmit = (e: FormEvent) => {
+    const handleOnSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current!, { publicKey: PUBLIC_KEY })
             .then(() => alert("Email sent successfully!"))
-            .catch((e: unknown) => console.log(e));
+            .catch((e: Error) => console.log(e));
+        e.currentTarget.reset();
     };
 
     return (
-        <form className="ContactForm" onSubmit={handleOnSubmit}>
+        <form className="ContactForm" onSubmit={handleOnSubmit} ref={formRef}>
             <p className="text-gray-400 text-sm">GET IN TOUCH</p>
             <h1 className="text-4xl font-bold my-3">Contact.</h1>
             <div className="my-5">
                 <label>
                     <span>Your Name</span>
                     <div className="bg-[#050816] p-3 rounded-lg">
-                        <input placeholder="Write your name here" type="text" id="from_name" name="from_name" onChange={handleChange} required />
+                        <input placeholder="Write your name here" type="text" id="from_name" name="from_name" required />
                     </div>
                 </label>
             </div>
@@ -35,7 +32,7 @@ const ContactForm = () => {
                 <label>
                     <span>Your Email</span>
                     <div className="bg-[#050816] p-3 rounded-lg">
-                        <input placeholder="Write your name here" type="email" id="from_email" name="from_email" onChange={handleChange} required />
+                        <input placeholder="Write your name here" type="email" id="from_email" name="from_email" required />
                     </div>
                 </label>
             </div>
@@ -43,7 +40,7 @@ const ContactForm = () => {
                 <label>
                     <span>Your Message</span>
                     <div className="bg-[#050816] p-3 rounded-lg">
-                        <textarea placeholder="Write your name here" name="message" onChange={handleChange} required />
+                        <textarea placeholder="Write your name here" name="message" required />
                     </div>
                 </label>
             </div>
