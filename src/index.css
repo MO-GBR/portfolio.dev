@@ -82,7 +82,7 @@
     }
 
     .Project {
-        @apply bg-purple-950/25 border border-violet-600 rounded-2xl p-0 flex flex-col w-fit items-center;
+        @apply bg-purple-950/25 border border-violet-600 rounded-2xl p-0 flex flex-col w-fit max-md:w-[19rem] items-center;
     }
 
     .ContactForm {

@@ -14,10 +14,10 @@ const Project = ({ title, description, img, githubLink, tags }: ProjectType) => 
                     <img src="/Icons/github.png" alt="github" className="w-[30px]" />
                 </a>
             </div>
-            <div className="text-3xl font-bold">{title}</div>
-            <div className="p-2 w-[400px] bg-[#050816] rounded-2xl m-2">{description}</div>
-            <div className="Flex_Center w-full">
-                <div className="grid grid-cols-3 gap-2">
+            <div className="text-3xl max-md:text-2xl text-center font-bold">{title}</div>
+            <div className="p-2 w-fit bg-[#050816] rounded-2xl m-2">{description}</div>
+            <div className="Flex_Center w-fit">
+                <div className="grid grid-cols-3 max-md:grid-cols-2 gap-2">
                     {
                         tags.map((tech: TechKeys, index) => {
                             const bg_color: string = BADGES[tech];
