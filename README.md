@@ -4,7 +4,7 @@ Welcome to my personal portfolio! This project showcases my skills as a full-sta
 
 ## 🔗 Live Demo
 
-👉 [View Portfolio]()
+👉 [View Portfolio](https://portfolio-dev-flame.vercel.app/)
 
 ## 🛠️ Tech Stack
 
@@ -40,7 +40,7 @@ Welcome to my personal portfolio! This project showcases my skills as a full-sta
 If you want to run the project locally:
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/MO-GBR/portfolio.dev.git
 cd portfolio
 npm install
 npm run dev

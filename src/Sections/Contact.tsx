@@ -6,6 +6,7 @@ import ContactForm from "../Components/Form"
 const Contact = () => {
     return (
         <section
+            id="contact"
             className="w-full overflow-hidden Flex_Center min-h-screen max-md:flex-col"
         >
             <motion.div
@@ -20,7 +21,7 @@ const Contact = () => {
                 variants={slideIn({ direction: "right", type: "tween", delay: 0.2, duration: 1})}
                 initial="hidden"
                 whileInView="show"
-                className="h-[60vh] w-full"
+                className="h-fit w-full my-5 Flex_Center"
             >
                 <ContactForm />
             </motion.div>

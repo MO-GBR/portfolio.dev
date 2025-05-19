@@ -60,11 +60,7 @@
     }
 
     .g3 {
-        @apply bg-gradient-to-t from-[#42003f] to-[#bf61ff];
-    }
-
-    .g4 {
-        @apply bg-gradient-to-t from-[#f12711] to-[#f5af19];
+        @apply bg-gradient-to-t from-[#42003f] to-[#af36ff];
     }
 
     /* Components */

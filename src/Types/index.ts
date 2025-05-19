@@ -25,6 +25,11 @@ export type CertificationType = {
     link: string
 };
 
+export type SkillType = {
+    img: string
+    name: string
+};
+
 // ======== Motion types ======== //
 export type MotionType = {
     direction?: string

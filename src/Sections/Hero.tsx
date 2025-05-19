@@ -18,9 +18,12 @@ const Hero = () => {
                             <span className="text-[#915eff] ml-5 font-Lobster">Mohamed</span>
                         </h1>
                         <p className="SubText font-Comic">I enjoy web development, I use tech stacks like MERN and PERN, I enjoy using 3D Visuals and creating Modern User Interfaces</p>
+                        <img src="/Images/main.png" alt="hero" className="w-[20rem]" />
                     </div>
                 </div>
-                <Pc />
+                {/* <div className="w-full h-screen Flex_Center">
+                    <img src="/Images/main.png" alt="hero" className="w-[20rem]" />
+                </div> */}
                 <div className="absolute top-[88vh] w-full flex justify-center items-center">
                     <a href="#about">
                         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">

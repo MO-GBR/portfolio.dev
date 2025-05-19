@@ -4,7 +4,7 @@ import { CERTIFICATIONS } from "../Constants"
 
 const Certifications = () => {
     return (
-        <div className="w-full flex flex-col">
+        <section id="certification" className="w-full flex flex-col">
             <HeadTitle head="My Certification" subHead="Freecodecamp" />
             <div className="Flex_Center w-full">
                 <div className="grid grid-cols-2 gap-5 max-md:grid-cols-1">
@@ -15,7 +15,7 @@ const Certifications = () => {
                     }
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,4 +1,4 @@
-import type { CertificationType, LinkType, ProjectType, SkillCardType } from "../Types";
+import type { CertificationType, LinkType, ProjectType, SkillCardType, SkillType } from "../Types";
 
 export const NAV_LINKS: LinkType[] = [
     {
@@ -8,6 +8,10 @@ export const NAV_LINKS: LinkType[] = [
     {
         title: 'My Skills',
         href: '#skills'
+    },
+    {
+        title: 'Certifications',
+        href: '#certification'
     },
     {
         title: 'Projects',
@@ -38,24 +42,83 @@ export const SKILLS: SkillCardType[] = [
     },
 ];
 
-export const TECHNOLOGIES: string[] = [
-    '/Images/Tech/html.png',
-    '/Images/Tech/css.png',
-    '/Images/Tech/javascript.png',
-    '/Images/Tech/git.png',
-    '/Images/Tech/graphql.png',
-    '/Images/Tech/mongodb.png',
-    '/Images/Tech/next.png',
-    '/Images/Tech/nodejs.png',
-    '/Images/Tech/postgres.png',
-    '/Images/Tech/react.png',
-    '/Images/Tech/redux.png',
-    '/Images/Tech/sass.png',
-    '/Images/Tech/socket.png',
-    '/Images/Tech/tailwind.png',
-    '/Images/Tech/three.png',
-    '/Images/Tech/typescript.png',
-    '/Images/Tech/zustand.png',
+export const TECHNOLOGIES: SkillType[] = [
+    {
+        img: '/Images/Tech/html.png',
+        name: 'HTML'
+    },
+    {
+        img: '/Images/Tech/css.png',
+        name: 'CSS'
+    },
+    {
+        img: '/Images/Tech/javascript.png',
+        name: 'JavaScript'
+    },
+    {
+        img: '/Images/Tech/git.png',
+        name: 'GIT'
+    },
+    {
+        img: '/Images/Tech/graphql.png',
+        name: 'GraphQL'
+    },
+    {
+        img: '/Images/Tech/mongodb.png',
+        name: 'MongoDB'
+    },
+    {
+        img: '/Images/Tech/next.png',
+        name: 'Next JS'
+    },
+    {
+        img: '/Images/Tech/nodejs.png',
+        name: 'Node JS'
+    },
+    {
+        img: '/Images/Tech/postgres.png',
+        name: 'PostgreSQL'
+    },
+    {
+        img: '/Images/Tech/react.png',
+        name: 'React JS'
+    },
+    {
+        img: '/Images/Tech/redux.png',
+        name: 'Redux'
+    },
+    {
+        img: '/Images/Tech/sass.png',
+        name: 'Sass'
+    },
+    {
+        img: '/Images/Tech/socket.png',
+        name: 'Socket.IO'
+    },
+    {
+        img: '/Images/Tech/tailwind.png',
+        name: 'Tailwind CSS'
+    },
+    {
+        img: '/Images/Tech/three.png',
+        name: 'Three JS'
+    },
+    {
+        img: '/Images/Tech/typescript.png',
+        name: 'TypeScript'
+    },
+    {
+        img: '/Images/Tech/prisma.png',
+        name: 'Prisma'
+    },
+    {
+        img: '/Images/Tech/fire.png',
+        name: 'Firebase'
+    },
+    {
+        img: '/Images/Tech/zustand.png',
+        name: 'Zustand'
+    }
 ];
 
 export const CERTIFICATIONS: CertificationType[] = [
@@ -76,73 +139,73 @@ export const CERTIFICATIONS: CertificationType[] = [
 export const PROJECTS: ProjectType[] = [
     {
         title: 'Nike Landing Page',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/nike.jpg',
+        description: 'A Nike landing page, with some cool and advanced features. A React JS landing page that is ready for production.',
+        githubLink: 'https://github.com/MO-GBR/nike_landing_page',
+        tags: ['Firebase', 'React', 'TailwindCSS']
     },
     {
         title: 'Netflix Clone',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/netflix.jpg',
+        description: 'A Netflix landing page, with some cool and advanced features. A React JS landing page that is ready for production.',
+        githubLink: 'https://github.com/MO-GBR/netflix_clone',
+        tags: ['Firebase', 'React', 'Sass', 'Redux']
     },
     {
         title: 'Disney Plus Clone',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/disney.jpg',
+        description: 'A Disney + landing page, with some cool and advanced features. A React JS landing page that is ready for production.',
+        githubLink: 'https://github.com/MO-GBR/disney_plus_clone',
+        tags: ['Firebase', 'React', 'Redux']
     },
     {
         title: 'Zentry Gaming Website',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/zentry.jpg',
+        description: 'Zentry is a gaming landing page, with some cool and advanced features. A React JS landing page that is ready for production.',
+        githubLink: 'https://github.com/MO-GBR/zentry_gaming_website',
+        tags: ['React', 'TailwindCSS']
     },
     {
         title: 'Q7 Cars Landing Page',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/q7.jpg',
+        description: 'A Cars landing page, with some cool and advanced features. A React JS landing page that is ready for production.',
+        githubLink: 'https://github.com/MO-GBR/q7cars_landing_page',
+        tags: ['React', 'TailwindCSS', 'ThreeJS']
     },
     {
         title: 'Xora Landing Page',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/xora.jpg',
+        description: 'Xora is a modern designed landing page, with some cool and advanced features. A React JS landing page that is ready for production.',
+        githubLink: 'https://github.com/MO-GBR/xora_landing_page',
+        tags: ['React', 'TailwindCSS']
     },
     {
         title: 'Smart E-commerce Website',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/smart.jpg',
+        description: 'A Full-Stack e-commerce website. That can handle all of the e-commerce user features. Featuring seamless payment processing through Stripe, you have the capability to purchase order from your shopping cart. With an admin side dashboard where you have a full management system.',
+        githubLink: 'https://github.com/MO-GBR/smart_ecom_website',
+        tags: ['React', 'Redux', 'TailwindCSS', 'NodeJS', 'MongoDB', 'ExpressJS']
     },
     {
         title: 'Chat App',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/chat.jpg',
+        description: 'Chatty is an advanced chat web app with some crazy amazing features. A real world project ready for production. It handles user privacy and easy to use. Real time functions that makes the app fast.',
+        githubLink: 'https://github.com/MO-GBR/chat_app',
+        tags: ['React', 'TailwindCSS', 'NodeJS', 'SocketIO', 'ExpressJS', 'PostgreSQL', 'GraphQL', 'Zustand']
     },
     {
         title: 'Evently Events Management Platform',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/event.jpg',
+        description: 'Full-stack platform for managing events. It serves as a hub, spotlighting diverse events taking place globally. Featuring seamless payment processing through Stripe, you have the capability to purchase tickets for any event or even initiate and manage your own events.',
+        githubLink: 'https://github.com/MO-GBR/evently_events_platform',
+        tags: ['NextJS', 'TailwindCSS', 'MongoDB', 'TypeScript']
     },
     {
         title: 'Green E-commerce Website',
-        img: '',
-        description: '',
-        githubLink: '',
-        tags: ['']
+        img: '/Images/Projects/green.jpg',
+        description: 'A Full-Stack Ecommerce website. That can handle all of the ecomm user features. Featuring seamless payment processing through Stripe, you have the capability to purchase order from you shopping cart.',
+        githubLink: 'https://github.com/MO-GBR/green_ecom_website',
+        tags: ['NextJS', 'TailwindCSS', 'TypeScript', 'PostgreSQL', 'Prisma', 'Zustand']
     },
 ];
 
@@ -153,11 +216,14 @@ export const BADGES: Record<string, string> = {
     React: 'bg-[#61dafb]',
     NodeJS: 'bg-[#83cd29]',
     MongoDB: 'bg-[#439934]',
-    PostgresSQL: 'bg-[#336791]',
+    PostgreSQL: 'bg-[#336791]',
     GraphQL: 'bg-[#e434aa]',
     NextJS: 'bg-[#000]',
     Redux: 'bg-[#764abc]',
-    Zustand: '#1f1f1f',
+    Zustand: 'bg-[#1f1f1f]',
     SocketIO: 'bg-[#000]',
-    ThreeJS: 'bg-[#080808]'
+    ThreeJS: 'bg-[#080808]',
+    ExpressJS: 'bg-[#000]',
+    Prisma: 'bg-[#000]',
+    Firebase: 'bg-[#f58220]',
 } as const;
