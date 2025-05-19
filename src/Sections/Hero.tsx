@@ -1,4 +1,3 @@
-import Pc from "../Components/Canvas/Pc"
 import Header from "../Components/Header"
 import { motion } from "motion/react"
 
@@ -21,9 +20,6 @@ const Hero = () => {
                         <img src="/Images/main.png" alt="hero" className="w-[20rem]" />
                     </div>
                 </div>
-                {/* <div className="w-full h-screen Flex_Center">
-                    <img src="/Images/main.png" alt="hero" className="w-[20rem]" />
-                </div> */}
                 <div className="absolute top-[88vh] w-full flex justify-center items-center">
                     <a href="#about">
                         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">
